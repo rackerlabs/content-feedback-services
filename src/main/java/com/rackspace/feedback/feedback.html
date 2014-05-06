@@ -1,0 +1,243 @@
+<style>
+
+    .rax-feedback-form-type-checkbox{
+        margin-bottom: 15px;  
+    } 
+       
+    .rax-feedback-form-wrapper {
+        //width:700px;
+        border: 5px solid #a7a9ac;
+        border-right: 0;
+        border-left: 0;
+        padding: 15px 5px;
+        -webkit-margin-start: 2px;
+        -webkit-margin-end: 2px;
+        -webkit-padding-before: 0.35em;
+        -webkit-padding-start: 0.75em;
+        -webkit-padding-end: 0.75em;
+        -webkit-padding-after: 0.625em; 
+        min-width: -webkit-min-content;   
+        font-family: "arial";
+        color: #333;
+        font-size: 13px;
+    }
+    
+    .rax-feedback-helpful{
+        margin-bottom: 10px;
+        margin-right: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block; 
+        position: relative;
+        top: 4px;   
+    }    
+
+    #rax-feedback-send{
+        border-radius: 0px;
+        padding: 5px 20px;
+        font-size: 14px;
+        float:left;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #e5e5e5;
+        border: 1px solid #a7a9ac !important;
+        color: #333;
+        align-items: flex-start;
+        text-align: center;  
+        -webkit-writing-mode: horizontal-tb;  
+        //letter-spacing: normal;
+        //word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        margin: 0em;
+        font: -webkit-small-control;
+        font-size: 14px;   
+        text-decoration:none; 
+        position:relative;
+        bottom:9px;
+    }
+    
+    #rax-feedback-send:hover{
+        background-color:#0046A8;
+        color:#FFF;    
+    } 
+    
+    .rax-feedback-form-submit{    
+        border-radius: 0px;
+        padding: 5px 20px;
+        font-size: 14px;
+        margin-right: 10px;
+        cursor: pointer;
+        background-color: #e5e5e5;
+        border: 1px solid #a7a9ac !important;
+        color: #333;
+        align-items: flex-start;
+        text-align: center;  
+        -webkit-writing-mode: horizontal-tb;  
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        margin: 0em;
+        font: -webkit-small-control;
+        font-size: 14px;
+    }
+    
+    .rax-feedback-form-submit:hover{
+        background-color:#0046A8;
+        color:#FFF;
+    }
+    
+    .rax-feedback-helpful{
+        font-size: 18px;
+        font-weight: bold;      
+    }
+    
+    .rax-feedback-edit-reason-nothelpful{
+        display: inline-block;
+        margin-right: 15px;
+        color: #333;
+        font-size: 16px;
+        cursor: default;
+        margin-bottom: 4px;
+    }
+    
+    .rax-feedback-form-type-checkbox label{
+        display:inline;
+    }
+    
+    .rax-feedback-textarea-wrapper textarea{
+        margin:0;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 100px;
+    }
+       
+    .rax-feedback-textarea-wrapper .rax-feedback-grippie{
+        
+        background: #eee url(https://00a52823a7761b1982ed-bdb063e557322b35129b4821a3d6a07e.ssl.cf1.rackcdn.com/grippie.png) no-repeat center 2px;
+        border: 1px solid #ddd;
+        border-top-width: 0;
+        cursor: s-resize;
+        height: 9px;
+        overflow: hidden;
+        width: 686px;
+    }
+    
+    #rax-bad-feedback{
+        display:none;
+    }
+    
+    .rax-feedback-fieldset-wrapper, #rax-bad-feedback{
+        margin-top:11px;
+        margin-bottom:5px;
+    }
+       
+    #rax-feedback-no-thanks{
+        position: relative;
+        bottom: 3px;
+        left: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        background: none;
+        border: none !important;
+        padding: 0;
+        margin: 5px 139px;
+        color: #a5b2b9;
+    }
+    
+    #rax-feedback-no-thanks:hover{
+        color:#000;
+    }
+    
+    #rax-feedback-nothanks-span:hover{
+        color:#000;
+    }
+    
+    #rax-thankyou{
+        display:none;
+    }
+    
+    .rax-feedback_submit_wrapper{
+        padding-bottom:2px;
+    }
+    
+    #rax-edit-email-address{
+        padding: 4px;
+        font-size:13px;
+    }
+    
+    #rax-thankyou-feedback{
+        top: 7px;
+    }
+    
+    @-moz-document url-prefix() {#rax-thankyou-feedback{top: 4px;}}
+         
+</style>
+<div id="site-feedback">
+    <form>
+    <div class="rax-feedback-form-wrapper" id="rax-edit-feedback-fieldset">
+        <div class="rax-feedback-fieldset-wrapper" id="rax-was-helpful">
+            <div class="rax-feedback-helpful">
+                Was this content helpful?
+            </div>
+            <div id="rax-feedback-helpful-btn" class="rax-feedback-form-submit">Yes</div>&nbsp;&nbsp;
+            <div id="rax-feedback-nothelpful-btn" class="rax-feedback-form-submit">No</div>
+        </div>       
+        <div id="rax-bad-feedback">
+            <div class="rax-feedback-helpful">
+                <span>
+                    Please give us feedback.
+                </span>
+            </div>
+            <div>
+                <label class="rax-feedback-edit-reason-nothelpful">
+                    What was wrong? 
+                </label>
+                
+                <div class="rax-feedback-form-type-checkbox">
+                   
+                        <input type="checkbox" id="rax-feedback-error" name="rax-feedback-reason_nothelpful" value="error" class="rax-feedback-form-checkbox">&nbsp; 
+                        <label class="option">Error in content</label>&nbsp;&nbsp;
+             
+                        <input type="checkbox" id="rax-feedback-needs-more-info" name="rax-feedback-reason_nothelpful" value="needs more info" class="rax-feedback-form-checkbox">&nbsp;  
+                        <label class="option">Content needs more information</label>
+                    
+                </div>
+            </div>
+            <div class="rax-form-item rax-form-type-textarea rax-form-item-reason-comment">
+                <label class="rax-feedback-edit-reason-nothelpful">
+                    What can we improve? 
+                </label>
+                <div class="rax-feedback-textarea-wrapper" cols="60" rows="5">
+                    <textarea maxlength="1200" id="edit-reason-comment" name="reason_comment" ></textarea>
+                </div>
+                <br>
+            </div>
+            <div class="rax-form-item rax-form-type-textfield rax-form-item-email-address">
+                <label class="rax-feedback-edit-reason-nothelpful">
+                    May we contact you? 
+                </label><br>
+                <input maxlength="200" placeholder="myemail@customer.com" type="text" id="rax-edit-email-address" name="email_address" value="" size="60" maxlength="128" class="rax-form-text">
+            </div><br>
+            <div class="rax-feedback_submit_wrapper">
+                <div id="rax-feedback-send">Send Feedback</div>
+                <div id="rax-feedback-no-thanks">No Thanks</div>
+            </div>
+        </div>        
+        <div id="rax-thankyou">
+            <div class="rax-feedback-helpful" id="rax-thankyou-feedback">
+                Thank you for your feedback.
+            </div>        
+        </div>
+        
+    </div>
+
+    </form>
+</div>
