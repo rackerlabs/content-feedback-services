@@ -7,7 +7,11 @@
 	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 
-
+	<properties>
+	    <timestamp>${maven.build.timestamp}</timestamp>
+	    <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+	</properties>
+	
 	<dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -72,6 +76,14 @@
 
 	<build>
 		<finalName>rax-feedback-services</finalName>
+		
+		<resources>
+		    <resource>
+		        <directory>src/main/resources</directory>
+		        <filtering>true</filtering>
+		    </resource>
+		</resources>		
+		
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -94,7 +106,7 @@
                                 <tstamp>
                                     <format property="time" pattern="yyyy-MM-dd HH:mm:ss" />
                                 </tstamp>
-                                <echo>Adding timestamp to buildinfor.properties: ${time} </echo>
+                                <echo>Adding timestamp to buildinfo.properties: ${time} </echo>
                                 <propertyfile file="src/main/webapp/WEB-INF/buildinfo.properties">
                                     <entry key="buildtime" value="${time}" />
                                 </propertyfile>
